@@ -61,35 +61,37 @@ const App = () => {
       )}
 
       {!loading && (
-        <div className="md:w-[60%] xl:w-[500px] lg:w-[40%] w-full m-auto flex flex-col items-center justify-center p-10 rounded-xl h-max bg-Dark-Grayish-Blue">
-          <div className="w-full py-3">
-            <p className="font-Manrope text-sm pb-3 text-center text-Neon-Green uppercase tracking-[2px] font-normal">
-              Advice #{advice?.slip.id}
-            </p>
-            <p className="font-Manrope text-center text-3xl mt-5 text-Light-Cyan">
-              “{advice?.slip.advice}”
-            </p>
-          </div>
+        <main>
+          <div className="md:w-[60%] xl:w-[500px] lg:w-[40%] w-full m-auto flex flex-col items-center justify-center p-10 rounded-xl h-max bg-Dark-Grayish-Blue">
+            <div className="w-full py-3">
+              <h1 className="font-Manrope text-sm pb-3 text-center text-Neon-Green uppercase tracking-[2px] font-normal">
+                Advice #{advice?.slip.id}
+              </h1>
+              <p className="font-Manrope text-center text-3xl mt-5 text-Light-Cyan">
+                “{advice?.slip.advice}”
+              </p>
+            </div>
 
-          <img
-            className="mt-5 mb-10"
-            src={patternDividerDesktop}
-            alt="pattern-divider-desktop"
-          />
-
-          <button
-            onClick={changeAdvice}
-            className={`p-5 -mb-[70px] shdw transition-all duration-500 bg-Neon-Green rounded-full`}
-          >
             <img
-              className={`${
-                animate ? "rotate-[270deg]" : "rotate-0"
-              } transition-all duration-500`}
-              src={iconDice}
-              alt="icon-dice"
+              className="mt-5 mb-10"
+              src={patternDividerDesktop}
+              alt="pattern-divider-desktop"
             />
-          </button>
-        </div>
+
+            <button
+              onClick={changeAdvice}
+              className={`p-5 -mb-[70px] shdw transition-all duration-500 bg-Neon-Green rounded-full`}
+            >
+              <img
+                className={`${
+                  animate ? "rotate-[270deg]" : "rotate-0"
+                } transition-all duration-500`}
+                src={iconDice}
+                alt="icon-dice"
+              />
+            </button>
+          </div>
+        </main>
       )}
     </div>
   );
